@@ -1,0 +1,194 @@
+.works {
+  background-color: $works-bg;
+}
+
+.works__title-hide {
+  @include visually-hidden;
+}
+
+.works__list {
+  margin: 0 3px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(90px, auto));
+  grid-template-rows: 260px 260px;
+}
+
+.wi1 {
+  @include workdarken($primary);
+
+  grid-column: 1 / 4;
+  grid-row: 1;
+  z-index: 1;
+
+  &:hover {
+    .works__title {
+      color: $white;
+
+      &::before {
+        background-color: $second;
+      }
+    }
+
+    .works__text {
+      color: $white;
+    }
+  }
+}
+
+.wi2 {
+  @include btnhoverworks;
+  @include workdarken($img1);
+
+  grid-column: 4 / 10;
+  grid-row: 1;
+}
+
+.wi3 {
+  @include btnhoverworks;
+  @include workdarken($img2);
+
+  grid-column: 10 / 13;
+  grid-row: 1;
+}
+
+.wi4 {
+  @include btnhoverworks;
+  @include workdarken($img3);
+
+  grid-column: span 3;
+}
+
+.wi5 {
+  @include btnhoverworks;
+  @include workdarken($img4);
+
+  grid-column: span 5;
+}
+
+.wi6 {
+  @include btnhoverworks;
+  @include workdarken($img5);
+
+  grid-column: span 4;
+}
+
+.works__title {
+  font-size: 30px;
+  font-family: "Raleway";
+  color: $worksText;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 40px 0;
+  padding-left: 15px;
+  position: relative;
+  transition-duration: 500ms;
+  transition-property: color;
+
+  &::before {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    margin-left: 15px;
+    width: 70px;
+    height: 2px;
+    left: 0;
+    top: -20px;
+    transition-duration: 500ms;
+    transition-property: background-color;
+  }
+}
+
+.works__text {
+  font-size: 14px;
+  color: $white;
+  line-height: 1.429;
+  margin: 20px 0;
+  padding: 0 15px;
+  transition-duration: 500ms;
+  transition-property: color;
+}
+
+.works__name {
+  font-size: 24px;
+  font-family: "Raleway";
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 20px 0;
+  padding: 0 15px;
+}
+
+.works__description {
+  font-size: 12px;
+  color: $descriptionColor;
+  text-transform: uppercase;
+  line-height: 1.667;
+  margin: 20px 0;
+  padding: 0 15px;
+
+  &::after {
+    background-color: $second;
+    width: 70px;
+    height: 2px;
+    display: block;
+    content: "";
+    margin-top: 20px;
+  }
+}
+
+.works__zoom,
+.works__link {
+  border-radius: 50%;
+  background-color: $primary;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin: 0 2px;
+  appearance: none;
+  padding: 0;
+  border: none;
+
+  // visibility: hidden
+  transition-property: background-color;
+  transition-duration: 500ms;
+
+  &:hover,
+  &:active {
+    background-color: $second;
+  }
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    fill: $white;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.works__btns {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  opacity: 0;
+}
+
+.works__info {
+  padding: 10px 25px 80px;
+}
+
+.wi2--active {
+  z-index: 1;
+  opacity: 0;
+
+  // .works__info
+  //   border-color: $second
+  //   opacity: 1
+  //   z-index: 2
+}

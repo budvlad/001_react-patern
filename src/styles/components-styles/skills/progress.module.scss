@@ -1,0 +1,37 @@
+.progress__name {
+  font-size: 14px;
+  font-family: "Raleway";
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.429;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  display: flex;
+  height: 15px;
+  overflow: hidden;
+  font-size: 1em;
+  background-color: $primary;
+  border: 2px solid $primary;
+  border-radius: 8px;
+  width: 700px;
+  margin-left: 20px;
+}
+
+.progress-line-70 {
+  @include progressbar(70%, white);
+}
+
+.progress-line-50 {
+  @include progressbar(50%, white);
+}
+
+.progress-line-90 {
+  @include progressbar(90%, white);
+}
+
+.progress-line-40 {
+  @include progressbar(40%, white);
+}

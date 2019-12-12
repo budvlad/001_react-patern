@@ -1,0 +1,57 @@
+.banner {
+  background: $img_bg center top no-repeat;
+  background-size: cover;
+}
+
+.banner__wrap {
+  padding-top: 255px;
+  padding-bottom: 250px;
+}
+
+.banner__info {
+  max-width: 580px;
+  margin-left: auto;
+}
+
+.banner__title {
+  font-size: 80px;
+  font-family: "Raleway";
+  color: $white;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+}
+
+.banner__little {
+  font-size: 43px;
+  display: block;
+}
+
+.banner__red {
+  color: $second;
+}
+
+.banner__text {
+  font-size: 18px;
+  font-family: "Raleway";
+  color: $color-text;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.333;
+  margin: 15px 0;
+}
+
+.banner__button1 {
+  @include button($second, transparent) {
+    display: inline-block;
+  }
+}
+
+.banner__button2 {
+  @include button($second, $white) {
+    display: inline-block;
+    margin-right: 0;
+    background-color: transparent;
+  }
+}

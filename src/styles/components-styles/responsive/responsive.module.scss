@@ -1,0 +1,80 @@
+.responsive__wrap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: $bg-two left bottom no-repeat;
+}
+.responsive__information {
+  max-width: 360px;
+  margin-left: auto;
+}
+.responsive__title {
+  font-size: 30px;
+  font-family: "Raleway";
+  color: $white;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 25px 0;
+  position: relative;
+
+  &::before {
+    background-color: $lineColor;
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    left: 0;
+    top: -25px;
+    content: "";
+  }
+}
+.responsive__text {
+  font-size: 14px;
+  color: $worksText;
+  line-height: 1.429;
+  margin: 20px 0;
+  &:hover {
+    color: $white;
+  }
+}
+.responsive__list {
+  margin: 20px 0;
+}
+.list {
+  font-size: 14px;
+  color: $listColor;
+  line-height: 1.286;
+  list-style: none;
+  padding: 0;
+}
+.responsive__button {
+  @include button($thirty, $thirty) {
+    margin-top: 50px;
+    background-color: transparent;
+  }
+}
+.list__element {
+  margin: 15px 0;
+  padding-left: 55px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: $second;
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .responsive__wrap {
+    background-image: none;
+  }
+
+  .responsive__information {
+    margin-left: 0;
+  }
+}
