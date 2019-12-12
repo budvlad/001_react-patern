@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import styleheader from "../../styles/style.scss";
+import styleheader from "../../styles/style.module.scss";
 import ComponentLogo from "./ComponentLogo";
 import ComponentMenu from "./ComponentMenu";
 
@@ -10,8 +10,8 @@ class ComponentHeader extends Component {
       <div>
         <header className={styleheader.header}>
           <div className={styleheader[("wrap", "header__wrap")]}>
-            <ComponentLogo />
             <ComponentMenu />
+            <ComponentLogo />
           </div>
         </header>
       </div>

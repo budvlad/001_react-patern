@@ -1,4 +1,4 @@
-@mixin clearfix() {
+@mixin clearfix {
   &:before,
   &:after {
     content: "";
@@ -15,9 +15,11 @@
   margin: 0 auto;
 }
 
-@mixin adaptive-video() {
+@mixin adaptive-video {
   position: relative;
-  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  padding-bottom: 56.25%;
+
+  /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
   padding-top: 30px;
   height: 0;
   overflow: hidden;
@@ -31,7 +33,7 @@
   }
 }
 
-@mixin visually-hidden() {
+@mixin visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -64,6 +66,7 @@
   appearance: none;
   transition-property: background-color, border-color;
   transition-duration: 500ms;
+
   @content;
 
   &:hover,
@@ -73,7 +76,7 @@
   }
 }
 
-@mixin btnhoverworks() {
+@mixin btnhoverworks {
   &:hover {
     .works__btns {
       opacity: 1;
@@ -98,9 +101,11 @@
     height: 100%;
     transition-duration: 500;
   }
+
   &:hover {
     border: 5px solid $second;
     margin: 0 0 2px 2px;
+
     &::before {
       background: transparent;
     }

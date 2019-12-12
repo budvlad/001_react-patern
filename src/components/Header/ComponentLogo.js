@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import stylelogo from "../../styles/style.scss";
-import logo from "img/logo.png";
+import stylelogo from "../../styles/style.module.scss";
+import logo from "../../assets/img/logo.png";
 
 class ComponentLogo extends Component {
   render() {

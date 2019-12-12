@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import stylemenu from "../../styles/style.scss";
+import stylemenu from "../../styles/style.module.scss";
 
 class ComponentMenu extends Component {
   render() {

@@ -2,11 +2,11 @@ import React from "react";
 
 import ComponentHeader from "./components/Header/ComponentHeader";
 
-import style from "./styles/style.scss";
+import style from "./styles/style.module.scss";
 
 function App() {
   return (
-    <div className={style["container"]}>
+    <div className={style.container}>
       <ComponentHeader />
     </div>
   );
